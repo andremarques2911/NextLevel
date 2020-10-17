@@ -1,0 +1,41 @@
+.container {
+  padding: 40px;
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+}
+
+.area {
+  margin-bottom: 20px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.areaTitle {
+  color: black;
+  font-size: 26px;
+  line-height: 1;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

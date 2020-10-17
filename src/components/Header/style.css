@@ -1,0 +1,13 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: #12AFCB;
+  padding: 5px;
+}
+
+#header .image {
+  width: 90px;
+  height: 90px;
+}
