@@ -1,0 +1,9 @@
+.vaga-dados {
+    display: flex;
+}
+.vaga-dados p{
+    margin-right: 10px;
+}
+.vaga-dados span {
+    font-weight: bold;
+}

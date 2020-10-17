@@ -19,8 +19,15 @@ function ModalVacancy(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Descrição da vaga</h4>
-        <p>{ props.vaga.description }</p>
+        <h5>Descrição da vaga</h5>
+        <div className="vaga-dados">
+          <span>Área:&nbsp;</span><p>{props.vaga.area}</p>
+          <span>Nível:&nbsp;</span><p>{props.vaga.level}</p>
+          <span>Experiência:&nbsp;</span><p>{props.vaga.experience}</p>
+          <span>Descrição:&nbsp;</span>
+          <p>{props.vaga.description}</p>
+          <ul>{props.vaga.requirements}</ul>
+        </div>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
