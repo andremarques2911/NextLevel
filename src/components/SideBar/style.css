@@ -1,0 +1,36 @@
+.side-bar {
+  width: 20%;
+  height: 100vh;
+  background: #12AFCB;
+  position: fixed;
+  transition: 1s;
+  z-index: 1000;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  color: #EBF2F5;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  text-decoration: none!important;
+}
+
+.menu-item:hover {
+  color: #FFF;
+  font-weight: bold;
+}
+
+.title {
+  margin-left: 10px;
+}

@@ -7,7 +7,7 @@
 
 body {
   color: #FFF;
-  background-color: #EBF2F5;
+  background-color: #EBF2F5!important;
 }
 
 body, input, button, textarea {

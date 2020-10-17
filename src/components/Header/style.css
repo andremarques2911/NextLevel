@@ -10,4 +10,5 @@
 #header .image {
   width: 90px;
   height: 90px;
+  cursor: pointer;
 }
