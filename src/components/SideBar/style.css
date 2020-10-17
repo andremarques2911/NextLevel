@@ -1,10 +1,23 @@
 .side-bar {
-  width: 20%;
-  height: 100vh;
-  background: #12AFCB;
+  transition: 1.2s;
   position: fixed;
-  transition: 1s;
+}
+
+.side-bar-opened {
+  width: 15%;
+  height: 100vh;
+  position: fixed;
   z-index: 1000;
+  background: #12AFCB;
+  opacity: 1 !important;
+  transition: 1.2s;
+}
+
+.side-bar-closed {
+  width: 0vw;
+  height: 0vh;
+  opacity: 0;
+  transition: 1.2s;
 }
 
 .close-icon {
@@ -23,6 +36,7 @@
   cursor: pointer;
   font-size: 20px;
   padding: 5px;
+  margin-left: 10px;
   text-decoration: none!important;
 }
 

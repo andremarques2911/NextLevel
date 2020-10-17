@@ -5,21 +5,23 @@ import { Link } from 'react-router-dom';
 
 import './style.css';
 
-function SideBar({ setShowSideBar }) {
+function SideBar({ showSideBar, setShowSideBar }) {
   return (
     <div className="side-bar">
-      <div className="close-button" >
-        <BiX size={ 45 } color="#000" className="close-icon" onClick={ _=> setShowSideBar(false) } />
-      </div>
-      <Link to="/" className="menu-item">
-        <BiBriefcaseAlt />
-        <span className="title">Vagas</span>
-      </Link>
+      <div className={showSideBar ? "side-bar-opened" : "side-bar-closed"}>
+        <div className="close-button" >
+          <BiX size={ 45 } color="#000" className="close-icon" onClick={ _=> setShowSideBar(false) } />
+        </div>
+        <Link to="/" className="menu-item">
+          <BiBriefcaseAlt />
+          <span className="title">Vagas</span>
+        </Link>
 
-      <Link to="/career" className="menu-item">
-        <BiLineChart />
-        <span className="title">Carreira</span>
-      </Link>
+        <Link to="/career" className="menu-item">
+          <BiLineChart />
+          <span className="title">Carreira</span>
+        </Link>
+      </div>
     </div>
   );
 }
