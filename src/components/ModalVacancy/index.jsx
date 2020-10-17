@@ -49,10 +49,14 @@ function ModalVacancy(props) {
           <span>Requisitos:&nbsp;</span>
           {
             requirements &&
-            requirements.map( requirement => {
+            requirements.map( ( requirement, key ) => {
               return (
-                <ListGroup>
-                   <ListGroup.Item>{ requirement }</ListGroup.Item>
+                <ListGroup key={ key }>
+                    {
+                      requirement.have ?
+                      <ListGroup.Item variant="success">{ requirement.description }</ListGroup.Item> :
+                      <ListGroup.Item>{ requirement.description }</ListGroup.Item>
+                    }
                 </ListGroup>
               )
             })

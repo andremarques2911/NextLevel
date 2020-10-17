@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 function Home() {
-  const [ modalShow, setModalShow ] = React.useState(false);
-  const [ vacancy, setVacancy ] = React.useState({});
+  const [ modalShow, setModalShow ] = useState(false);
+  const [ vacancy, setVacancy ] = useState({});
   const openModal = vacancy => {
     setModalShow( true );
     setVacancy( vacancy );
@@ -61,8 +61,14 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
     requirements: [
-      "Java",
-      "Angular"
+      {
+        description: "Java",
+        have: true
+      },
+      {
+        description: "Angular",
+        have: false
+      }
     ]
   },
   {
@@ -72,8 +78,14 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
     requirements: [
-      "NodeJS",
-      "ReactJS"
+      {
+        description: "NodeJS",
+        have: false
+      },
+      {
+        description: "ReactJS",
+        have: false
+      }
     ]
   },
   {
@@ -83,8 +95,14 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Recursos Humanos",
     requirements: [
-      "Recrutamento e seleção",
-      "Pscicologia"
+      {
+        description: "Recrutamento e seleção",
+        have: true
+      },
+      {
+        description: "Pscicologia",
+        have: false
+      }
     ]
   },
   {
@@ -94,8 +112,14 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
     requirements: [
-      "Node",
-      "Oracle"
+      {
+        description: "NodeJS",
+        have: false
+      },
+      {
+        description: "Oracle",
+        have: true
+      }
     ]
   },
   {
@@ -105,7 +129,10 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
     requirements: [
-      "Experiência com Flutter",
+      {
+        description: "Experiência com Flutter",
+        have: false
+      }
     ]
   },
   {
@@ -115,9 +142,18 @@ let vacancies = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
     requirements: [
-      "Tempo na área: 1-4 anos",
-      "Experiência em sugerir soluções e arquiteturas para projetos",
-      "Conhecimento em Spring e React"
+      {
+        description: "Tempo na área: 1-4 anos",
+        have: false
+      },
+      {
+        description: "Experiência em sugerir soluções e arquiteturas para projetos",
+        have: true
+      },
+      {
+        description: "Conhecimento em Spring e React",
+        have: true
+      }
     ]
-  } 
+  }
 ];
