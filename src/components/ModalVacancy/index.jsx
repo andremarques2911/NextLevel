@@ -2,10 +2,17 @@ import React from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 import './style.css';
 
 function ModalVacancy(props) {
+  const { title, area, level, experience, description, requirements } = props.vaga;
+
+  const abreTeste = _=> {
+    alert("ABRE O TESTE");
+  }
+
   return (
     <Modal
       {...props}
@@ -15,22 +22,46 @@ function ModalVacancy(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          { props.vaga.title }
+          { title }
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <h5>Descrição da vaga</h5>
-        <div className="vaga-dados">
-          <span>Área:&nbsp;</span><p>{props.vaga.area}</p>
-          <span>Nível:&nbsp;</span><p>{props.vaga.level}</p>
-          <span>Experiência:&nbsp;</span><p>{props.vaga.experience}</p>
+        <div className="vacancy-data">
+          <div className="basic-data">
+            <div className="data">
+              <span>Área:&nbsp;</span>
+              <p>{ area }</p>
+            </div>
+            <div className="data">
+              <span>Nível:&nbsp;</span>
+              <p>{ level }</p>
+            </div>
+            <div className="data">
+              <span>Experiência:&nbsp;</span>
+              <p>{ experience }</p>
+            </div>
+          </div>
+
           <span>Descrição:&nbsp;</span>
-          <p>{props.vaga.description}</p>
-          <ul>{props.vaga.requirements}</ul>
+          <p>{ description }</p>
+
+          <span>Requisitos:&nbsp;</span>
+          {
+            requirements &&
+            requirements.map( requirement => {
+              return (
+                <ListGroup>
+                   <ListGroup.Item>{ requirement }</ListGroup.Item>
+                </ListGroup>
+              )
+            })
+          }
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={ abreTeste }>Fazer Teste</Button>
+        <Button onClick={ props.onHide }>Fechar</Button>
       </Modal.Footer>
     </Modal>
   );

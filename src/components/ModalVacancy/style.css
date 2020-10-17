@@ -1,9 +1,17 @@
-.vaga-dados {
-    display: flex;
+.vacancy-data {
+  display: flex;
+  flex-direction: column;
 }
-.vaga-dados p{
-    margin-right: 10px;
+
+.basic-data {
+  display: flex;
 }
-.vaga-dados span {
-    font-weight: bold;
+
+.data {
+  display: flex;
+  margin-right: 20px;
+}
+
+.vacancy-data span {
+  font-weight: bold;
 }
