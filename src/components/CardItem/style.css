@@ -9,17 +9,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-
   transition: 0.2s;
 }
 
-.cardPanel:hover {
+.cardPanelHover:hover {
   background: #73ecfc;
   transform: scale(1.1);
 }
 
-.cardPanel:hover .btn-primary {
+.cardPanelHover:hover .btn-primary {
   background: #007bff;
   color: white;
 }

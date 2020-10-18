@@ -2,9 +2,12 @@ import React from 'react';
 
 import './style.css';
 
-function CardItem({ children }) {
+function CardItem({ children, hover=true }) {
+
+  const classes = `cardPanel ${ hover ? 'cardPanelHover' : '' }`;
+
   return (
-    <div className="cardPanel">
+    <div className={ classes }>
       { children }
     </div>
   );

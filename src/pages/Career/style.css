@@ -1,0 +1,22 @@
+.time-line {
+  height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+.time-line-container {
+  height: calc(100vh - 70px);
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.time-line-container .center {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.time-line-container .center .cardPanel {
+  margin: 0;
+}
+
+
