@@ -7,7 +7,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import './style.css';
 
 function ModalVacancy(props) {
-  const { title, area, level, experience, description, requirements } = props.vaga;
+  const { title, area, level, experience, description, requirements } = props.vacancy;
 
   const abreTeste = _=> {
     alert("ABRE O TESTE");

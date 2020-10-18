@@ -9,12 +9,6 @@
   overflow-y: scroll;
 }
 
-.time-line-container .center {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
 .time-line-container .center .cardPanel {
   margin: 0;
 }

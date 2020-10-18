@@ -43,7 +43,7 @@ function Home() {
         <ModalVacancy
           show={modalShow}
           onHide={() => setModalShow(false)}
-          vaga={vacancy}
+          vacancy={vacancy}
         />
       </main>
     </React.Fragment>
