@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from '../../components/Header';
-import CardItem from '../../components/CardItem';
 import TimeLine from '../../components/TimeLine';
 
 import './style.css';

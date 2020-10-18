@@ -15,3 +15,15 @@
 .vacancy-data span {
   font-weight: bold;
 }
+
+@media only screen and (max-width: 992px) {
+  .data {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 433px) {
+  .basic-data {
+    display: block;
+  }
+}

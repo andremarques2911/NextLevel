@@ -2,16 +2,12 @@ import React from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import ListGroup from 'react-bootstrap/ListGroup';
 
 import './style.css';
 
 function CustomModal(props) {
   const { children } = props;
-  const { title, dateIn, dateOut } = props.job;
-  const abreTeste = _=> {
-    alert("ABRE O TESTE");
-  }
+  const { title } = props.job;
 
   return (
     <Modal
