@@ -57,7 +57,7 @@ function TimeLine(props) {
             projects.map( ( project, key ) => {
               return (
                 <ListGroup key={ key }>
-                  <ListGroup.Item>{ project }</ListGroup.Item>
+                  <ListGroup.Item className="list-item">{ project }</ListGroup.Item>
                 </ListGroup>
               )
             })

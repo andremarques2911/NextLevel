@@ -16,6 +16,11 @@
   font-weight: bold;
 }
 
+.list-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 992px) {
   .data {
     display: block;

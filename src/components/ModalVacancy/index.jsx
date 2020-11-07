@@ -12,9 +12,9 @@ function ModalVacancy(props) {
 
   const abreTeste = _=> {
     swal({
-      title: "Ótimo!",
-      text: "Um pedido para realizar o teste foi enviado para seu gestor. Aguarde a aprovação do mesmo para prosseguir com o processors!",
-      icon: "success"
+      title: "Solicitação efetuada!",
+      text: "Um pedido para realizar o teste foi enviado para seu gestor. Aguarde a aprovação do mesmo para prosseguir com o processor!",
+      icon: "info"
     });
   }
 
@@ -59,8 +59,8 @@ function ModalVacancy(props) {
                 <ListGroup key={ key }>
                     {
                       requirement.have ?
-                      <ListGroup.Item variant="success">{ requirement.description }</ListGroup.Item> :
-                      <ListGroup.Item>{ requirement.description }</ListGroup.Item>
+                      <ListGroup.Item className="list-item" variant="success">{ requirement.description }</ListGroup.Item> :
+                      <ListGroup.Item className="list-item">{ requirement.description }</ListGroup.Item>
                     }
                 </ListGroup>
               )
