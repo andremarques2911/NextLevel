@@ -13,7 +13,7 @@ function ModalVacancy(props) {
   const abreTeste = _=> {
     swal({
       title: "Solicitação efetuada!",
-      text: "Um pedido para realizar o teste foi enviado para seu gestor. Aguarde a aprovação do mesmo para prosseguir com o processor!",
+      text: "Um pedido para realizar o teste foi enviado para seu gestor. Aguarde a aprovação do mesmo para prosseguir com o processo!",
       icon: "info"
     });
   }
