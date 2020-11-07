@@ -23,22 +23,30 @@ function Home() {
       <Header />
       <main className="container">
         <div className="area">
-          <span className="areaTitle">ÁREA</span>
-          <div className="cardContainer">
-            {
-              vacancies.map( ( vacancy, key ) => {
-                return (
-                  <React.Fragment key={ key }>
-                      <CardItem>
-                        <p>{vacancy.title}</p>
-                        <Button onClick={ _=> openModal(vacancy) }>
-                          Ver mais
-                        </Button>
-                      </CardItem>
-                  </React.Fragment>
-              )})
-            }
-          </div>
+          {
+            vacancyGroupings.map(area => {
+              return (
+                <React.Fragment>
+                  <span className="areaTitle">{area.area}</span>
+                  <div className="cardContainer">
+                    {
+                      area.vacancies.map( ( vacancy, key ) => {
+                        return (
+                          <React.Fragment key={ key }>
+                              <CardItem>
+                                <p>{vacancy.title}</p>
+                                <Button onClick={ _=> openModal(vacancy) }>
+                                  Ver mais
+                                </Button>
+                              </CardItem>
+                          </React.Fragment>
+                      )})
+                    }
+                  </div>
+                </React.Fragment>
+              )
+            })
+          }
         </div>
         <ModalVacancy
           show={modalShow}
@@ -53,107 +61,113 @@ function Home() {
 export default Home;
 
 
-let vacancies = [
+let vacancyGroupings = [
   {
-    title: "Desenvolvedor Java",
-    level: "Pleno",
-    experience: "2",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Tecnologia da Informação",
-    requirements: [
+    vacancies: [
       {
-        description: "Java",
-        have: true
+        title: "Desenvolvedor Java",
+        level: "Pleno",
+        experience: "2",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "Java",
+            have: true
+          },
+          {
+            description: "Angular",
+            have: false
+          }
+        ]
       },
       {
-        description: "Angular",
-        have: false
+        title: "Desenvolvedor PHP",
+        level: "Senior",
+        experience: "5",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "NodeJS",
+            have: false
+          },
+          {
+            description: "ReactJS",
+            have: false
+          }
+        ]
+      },
+      {
+        title: "Desenvolvedor Node",
+        level: "Junior",
+        experience: "0-1",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "NodeJS",
+            have: false
+          },
+          {
+            description: "Oracle",
+            have: true
+          }
+        ]
+      },
+      {
+        title: "Desenvolvedor Flutter",
+        level: "Sênior",
+        experience: "5",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "Experiência com Flutter",
+            have: false
+          }
+        ]
+      },
+      {
+        title: "Engenheiro de Software",
+        level: "Pleno",
+        experience: "2",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "Tempo na área: 1-4 anos",
+            have: false
+          },
+          {
+            description: "Experiência em sugerir soluções e arquiteturas para projetos",
+            have: true
+          },
+          {
+            description: "Conhecimento em Spring e React",
+            have: true
+          }
+        ]
       }
     ]
   },
   {
-    title: "Desenvolvedor PHP",
-    level: "Senior",
-    experience: "5",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    area: "Tecnologia da Informação",
-    requirements: [
-      {
-        description: "NodeJS",
-        have: false
-      },
-      {
-        description: "ReactJS",
-        have: false
-      }
-    ]
-  },
-  {
-    title: "Tech Recruiter",
-    level: "Pleno",
-    experience: "2",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     area: "Recursos Humanos",
-    requirements: [
+    vacancies: [
       {
-        description: "Recrutamento e seleção",
-        have: true
+        title: "Tech Recruiter",
+        level: "Pleno",
+        experience: "2",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        requirements: [
+          {
+            description: "Recrutamento e seleção",
+            have: true
+          },
+          {
+            description: "Pscicologia",
+            have: false
+          }
+        ]
       },
-      {
-        description: "Pscicologia",
-        have: false
-      }
-    ]
-  },
-  {
-    title: "Desenvolvedor Node",
-    level: "Junior",
-    experience: "0-1",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    area: "Tecnologia da Informação",
-    requirements: [
-      {
-        description: "NodeJS",
-        have: false
-      },
-      {
-        description: "Oracle",
-        have: true
-      }
-    ]
-  },
-  {
-    title: "Desenvolvedor Flutter",
-    level: "Sênior",
-    experience: "5",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    area: "Tecnologia da Informação",
-    requirements: [
-      {
-        description: "Experiência com Flutter",
-        have: false
-      }
-    ]
-  },
-  {
-    title: "Engenheiro de Software",
-    level: "Pleno",
-    experience: "2",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    area: "Tecnologia da Informação",
-    requirements: [
-      {
-        description: "Tempo na área: 1-4 anos",
-        have: false
-      },
-      {
-        description: "Experiência em sugerir soluções e arquiteturas para projetos",
-        have: true
-      },
-      {
-        description: "Conhecimento em Spring e React",
-        have: true
-      }
     ]
   }
+
+
 ];

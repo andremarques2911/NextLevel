@@ -3,6 +3,7 @@ import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import swal from 'sweetalert';
 
 import './style.css';
 
@@ -10,7 +11,11 @@ function ModalVacancy(props) {
   const { title, area, level, experience, description, requirements } = props.vacancy;
 
   const abreTeste = _=> {
-    alert("ABRE O TESTE");
+    swal({
+      title: "Ótimo!",
+      text: "Um pedido para realizar o teste foi enviado para seu gestor. Aguarde a aprovação do mesmo para prosseguir com o processors!",
+      icon: "success"
+    });
   }
 
   return (
@@ -64,7 +69,7 @@ function ModalVacancy(props) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={ abreTeste }>Fazer Teste</Button>
+        <Button onClick={ abreTeste }>Solicitar Teste</Button>
         <Button onClick={ props.onHide }>Fechar</Button>
       </Modal.Footer>
     </Modal>

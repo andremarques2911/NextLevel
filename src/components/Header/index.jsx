@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { BsFillCircleFill } from 'react-icons/bs';
+import { BiMenu } from 'react-icons/bi';
 import Logo from '../../images/logo.png';
 import SideBar from '../../components/SideBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,8 +17,8 @@ function Header() {
     <div>
       <SideBar showSideBar={ showSideBar } setShowSideBar={ setShowSideBar } />
       <header id="header">
-        <img className="image" src={ Logo } alt="NextLevel" onClick={ openSideBar }/>
-        <BsFillCircleFill size={ 45 } color="#EBF2F5" />
+          <BiMenu size={40} className="menu-icon" onClick={ openSideBar } />
+          <img className="image" src={ Logo } alt="NextLevel" />
       </header>
     </div>
   );
